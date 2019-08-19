@@ -5,8 +5,8 @@
   "main": "./dist/gf-expression.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "deploy": "vue-cli-service build --target lib --name gf-expression ./src/gf-expression.js"
+    "build": "vue-cli-service build --target lib --name gf-expression ./src/gf-expression.js",
+    "deploy": "npm publish --access public"
   },
   "dependencies": {
     "core-js": "^2.6.5",
