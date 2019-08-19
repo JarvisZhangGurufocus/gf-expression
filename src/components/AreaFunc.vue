@@ -48,9 +48,6 @@ export default {
   mounted () {
     this.onFocus = debounce(this.onFocus, 10)
   },
-  components: {
-    AreaGroup: () => import('./AreaGroup')
-  },
   data () {
     return {
       focus: false,

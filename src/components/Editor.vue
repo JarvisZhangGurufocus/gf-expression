@@ -13,12 +13,7 @@
 </template>
 
 <script>
-import AreaGroup from './AreaGroup'
-
 export default {
-  components: {
-    AreaGroup
-  },
   props: {
     funcs: { type: Array, default: () => [] },
     vars: { type: Array, default: () => [] },

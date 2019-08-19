@@ -74,13 +74,13 @@ export default {
   },
   methods: {
     getContent () {
-      return this.$el.querySelector('.area-input-inner').textContent ? this.$el.querySelector('.area-input-inner').textContent : ''
+      return this.$el.querySelector('.gf-exp-area-input-inner').textContent ? this.$el.querySelector('.gf-exp-area-input-inner').textContent : ''
     },
     async getFormula () {
-      return this.$el.querySelector('.area-input-inner').textContent ? this.$el.querySelector('.area-input-inner').textContent : ''
+      return this.$el.querySelector('.gf-exp-area-input-inner').textContent ? this.$el.querySelector('.gf-exp-area-input-inner').textContent : ''
     },
     setContent (content) {
-      this.$el.querySelector('.area-input-inner').textContent = content
+      this.$el.querySelector('.gf-exp-area-input-inner').textContent = content
     },
     pluckFuncs () {
       return []
@@ -99,7 +99,7 @@ export default {
     },
     async requestFocus (start = false) {
       if (!this.getContent()) {
-        return this.$el.querySelector('.area-input-inner').focus()
+        return this.$el.querySelector('.gf-exp-area-input-inner').focus()
       }
 
       let length = 0
@@ -107,7 +107,7 @@ export default {
         length = this.getContent().length
       }
 
-      const node = this.$el.querySelector('.area-input-inner').childNodes[0]
+      const node = this.$el.querySelector('.gf-exp-area-input-inner').childNodes[0]
       const range = document.createRange()
       range.setStart(node, length)
       range.setEnd(node, length)

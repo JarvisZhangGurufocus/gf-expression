@@ -32,13 +32,6 @@ export default {
     vars: { type: Array, default: () => [] },
     symbols: { type: Array, default: () => ['+', '-', '*', '/', 'AND', 'OR', '>', '<', '='] }
   },
-  components: {
-    AreaInput: () => import('./AreaInput'),
-    AreaFunc: () => import('./AreaFunc'),
-    AreaVar: () => import('./AreaVar'),
-    AreaQuote: () => import('./AreaQuote'),
-    AreaSymbol: () => import('./AreaSymbol')
-  },
   mounted () {
     this.onFocus = debounce(this.onFocus, 10)
   },

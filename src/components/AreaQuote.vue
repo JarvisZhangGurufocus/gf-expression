@@ -35,9 +35,6 @@ export default {
     vars: { type: Array, default: () => [] },
     symbols: { type: Array, default: () => ['+', '-', '*', '/', 'AND', 'OR', '>', '<', '='] }
   },
-  components: {
-    AreaGroup: () => import('./AreaGroup')
-  },
   data () {
     return {
       focus: false,
