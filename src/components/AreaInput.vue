@@ -1,10 +1,10 @@
 <template>
   <div 
-    class="area-input"
+    class="gf-exp-area-input"
     :class="{'focus':focus}">
     
     <div 
-      class="area-input-inner" 
+      class="gf-exp-area-input-inner" 
       contenteditable="true"
       @keydown="onKeyDown"
       @paste="onPaste"
@@ -13,28 +13,28 @@
     
     <div
       v-if="focus && matchs && matchs.length > 0"
-      class="area-input-drop-down">
+      class="gf-exp-area-input-drop-down">
       <template v-for="(item, idx) in matchs">
         <div 
           v-if="item.component === 'area-symbol'" 
-          class="item symbol-item"
-          :class="{'selected': idx === matchs_idx}"
+          class="gf-exp-item gf-exp-symbol-item"
+          :class="{'gf-exp-selected': idx === matchs_idx}"
           :key="`SYMBOL${idx}`"
           @mousedown="handleMatch(item)">
           {{ item.item }}
         </div>
         <div 
           v-else-if="item.component === 'area-var'"
-          class="item var-item"
-          :class="{'selected': idx === matchs_idx}"
+          class="gf-exp-item gf-exp-var-item"
+          :class="{'gf-exp-selected': idx === matchs_idx}"
           :key="`VAR${idx}`"
           @mousedown="handleMatch(item)">
           {{ item.item.label }}
         </div>
         <div 
           v-else-if="item.component === 'area-func'"
-          class="item func-item"
-          :class="{'selected': idx === matchs_idx}"
+          class="gf-exp-item gf-exp-func-item"
+          :class="{'gf-exp-selected': idx === matchs_idx}"
           :key="`FUNC${idx}`"
           @mousedown="handleMatch(item)">
           {{ item.item.label }}
@@ -354,7 +354,7 @@ export default {
 </script>
 
 <style lang="scss">
-  .area-input-inner {
+  .gf-exp-area-input-inner {
     min-width: 4px;
     height: 24px;
     line-height: 24px;
@@ -364,7 +364,7 @@ export default {
     }
   }
 
-  .area-input {
+  .gf-exp-area-input {
     position: relative;
     border: 1px dashed;
     border-color: transparent;
@@ -376,7 +376,7 @@ export default {
     }
   }
 
-  .area-input-drop-down {
+  .gf-exp-area-input-drop-down {
     position: absolute;
     border-radius: 4px;
     border: 1px solid #ebeef5;
@@ -388,12 +388,12 @@ export default {
     left: 50%;
     white-space: nowrap;
 
-    .item {
+    .gf-exp-item {
       padding: 0 4px;
       line-height: 20px;
     }
 
-    .symbol-item::after {
+    .gf-exp-symbol-item::after {
       content: 'Symbol';
       font-size: 11px;
       border: 1px solid #E1F3D8;
@@ -403,7 +403,7 @@ export default {
       margin-left: 8px;
     }
 
-    .var-item::after {
+    .gf-exp-var-item::after {
       content: 'Symbol';
       font-size: 11px;
       border: 1px solid #D9ECFF;
@@ -413,7 +413,7 @@ export default {
       margin-left: 8px;
     }
 
-    .func-item::after {
+    .gf-exp-func-item::after {
       content: 'Function';
       font-size: 11px;
       background: #f4f4f5;
@@ -423,7 +423,7 @@ export default {
       margin-left: 8px;
     }
 
-    .selected {
+    .gf-exp-selected {
       background: #DCDFE6;
     }
   }

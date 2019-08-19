@@ -1,5 +1,5 @@
 <template>
-  <div class="area-symbol" @click="requestFocus">
+  <div class="gf-exp-area-symbol" @click="requestFocus">
     {{ symbol }}
   </div>
 </template>
@@ -48,7 +48,7 @@ export default {
 </script>
 
 <style>
-  .area-symbol {
+  .gf-exp-area-symbol {
     cursor: pointer;
     display: inline-block;
     border: 1px solid;

@@ -1,5 +1,5 @@
 <template>
-  <div class="area-var" @click="requestFocus">
+  <div class="gf-exp-area-var" @click="requestFocus">
     {{ variable ? variable.label : '' }}
   </div>
 </template>
@@ -52,7 +52,7 @@ export default {
 </script>
 
 <style>
-  .area-var {
+  .gf-exp-area-var {
     cursor: pointer;
     display: inline-block;
     border: 1px solid;

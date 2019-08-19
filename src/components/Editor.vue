@@ -1,12 +1,12 @@
 <template>
-  <div class="gf-expression-editor" @click.self="onClick">
+  <div class="gf-exp-editor" @click.self="onClick">
     <area-group 
       ref="AreaGroup"
       :funcs="funcs"
       :vars="vars"
       :symbols="symbols"  
       @on-change="onChange"/>
-    <div class="gf-expression-cp-button" @click="onCopy">
+    <div class="gf-exp-cp-button" @click="onCopy">
       Copy
     </div>
   </div>
@@ -74,14 +74,14 @@ export default {
 </script>
 
 <style lang="scss">
-  .gf-expression-editor {
+  .gf-exp-editor {
     border: 1px solid #DCDFE6;
     min-height: 20px;
     padding: 4px 40px 4px 4px;
     position: relative;
   }
 
-  .gf-expression-cp-button {
+  .gf-exp-cp-button {
     position: absolute;
     top: 5px;
     right: 4px;
@@ -93,7 +93,7 @@ export default {
     cursor: pointer;
   }
 
-  .gf-expression-message {
+  .gf-exp-message {
     position: absolute;
     z-index: 99999;
     min-width: 380px;

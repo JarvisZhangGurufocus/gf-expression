@@ -1,10 +1,10 @@
 <template>
   <div 
-    class="area-func"
+    class="gf-exp-area-func"
     @click.self="requestFocus">
     <span
       @click="requestFocus(true)" 
-      :class="{'area-func-focus': focus}">
+      :class="{'gf-exp-area-func-focus': focus}">
       {{ func.label }} (
     </span>
 
@@ -29,7 +29,7 @@
     </template>
     <span
       @click="requestFocus(false)" 
-      :class="{'area-func-focus': focus}">
+      :class="{'gf-exp-area-func-focus': focus}">
       )
     </span>
   </div>
@@ -230,13 +230,13 @@ export default {
 </script>
 
 <style lang="scss">
-  .area-func {
+  .gf-exp-area-func {
     display: inline-block;
     padding: 0 4px;
     font-size: 14px;
   }
 
-  .area-func-focus {
+  .gf-exp-area-func-focus {
     color: #67C23A;
   }
 </style>

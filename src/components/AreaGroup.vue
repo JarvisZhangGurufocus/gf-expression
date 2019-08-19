@@ -1,5 +1,5 @@
 <template>
-  <div class="area-group">
+  <div class="gf-exp-area-group">
     <component
       v-for="(child, idx) in children"
       
@@ -318,7 +318,7 @@ export default {
 </script>
 
 <style>
-  .area-group {
+  .gf-exp-area-group {
     display: inline-block;
   }
 </style>

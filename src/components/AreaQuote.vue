@@ -1,10 +1,10 @@
 <template>
   <div 
-    class="area-quote"
+    class="gf-exp-area-quote"
     @click.self="requestFocus">
     <span
       @click="requestFocus(true)"
-      :class="{'area-quote-focus': focus}"> 
+      :class="{'gf-exp-area-quote-focus': focus}"> 
       ( 
     </span>
     <area-group
@@ -21,7 +21,7 @@
       @on-blur="onBlur"/>
     <span
       @click="requestFocus(false)" 
-      :class="{'area-quote-focus': focus}"> 
+      :class="{'gf-exp-area-quote-focus': focus}"> 
       ) 
     </span>
   </div>
@@ -88,11 +88,11 @@ export default {
 </script>
 
 <style>
-  .area-quote {
+  .gf-exp-area-quote {
     display: inline-block;
   }
 
-  .area-quote-focus {
+  .gf-exp-area-quote-focus {
     color: #67C23A;
   }
 </style>
