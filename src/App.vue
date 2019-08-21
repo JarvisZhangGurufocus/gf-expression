@@ -19,12 +19,8 @@
 
 <script>
 import _ from 'lodash'
-import GfExpression from './components/GfExpression'
 
 export default {
-  components: {
-    GfExpression
-  },
   data () {
     return {
       funcs: [

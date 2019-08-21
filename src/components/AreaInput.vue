@@ -404,7 +404,7 @@ export default {
     }
 
     .gf-exp-var-item::after {
-      content: 'Symbol';
+      content: 'Field';
       font-size: 11px;
       border: 1px solid #D9ECFF;
       background: #ECF5FF;
